@@ -16,7 +16,7 @@ import { personliseNews } from "./commands/personalise";
 import { IUIKitResponse, UIKitActionButtonInteractionContext, UIKitBlockInteractionContext, UIKitViewSubmitInteractionContext } from "@rocket.chat/apps-engine/definition/uikit";
 import { ExecuteViewSubmitHandler } from "./handlers/ExecuteViewSubmitHandler";
 import { ExecuteActionButtonHandler } from "./handlers/ExecuteBlockActionHandler";
-import { UIActionButtonContext } from "@rocket.chat/apps-engine/definition/ui";
+import { IUIActionButtonDescriptor, UIActionButtonContext } from "@rocket.chat/apps-engine/definition/ui";
 
 export class NewsAggregationApp extends App {
     constructor(info: IAppInfo, logger: ILogger, accessors: IAppAccessors) {
@@ -38,13 +38,19 @@ export class NewsAggregationApp extends App {
             configuration.slashCommands.provideSlashCommand(
                 new personliseNews(this)
             ),
-
-            configuration.ui.registerButton({
-                actionId: "summarise",
-                context: UIActionButtonContext.MESSAGE_ACTION,
-                labelI18n: "Summarise News",
-            }),
         ]);
+
+        configuration.ui.registerButton({
+            actionId: "summarise",
+            context: UIActionButtonContext.MESSAGE_ACTION,
+            labelI18n: "SummariseNews",
+        });
+
+        configuration.ui.registerButton({
+            actionId: "relatedarticles",
+            context: UIActionButtonContext.MESSAGE_ACTION,
+            labelI18n: "RelatedArticles",
+        })
     }
 
     public async executeViewSubmitHandler(

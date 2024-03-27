@@ -54,7 +54,6 @@ class NewsProcessor {
         const { link, title, description, pubDate } = newsData;
         const message = `*${title}*\n ${description} \n ${link} \n ${pubDate}`;
 
-        const sender = context.getSender();
         const room = context.getRoom();
         const messageStructure = modify.getCreator().startMessage();
         messageStructure.setRoom(room);

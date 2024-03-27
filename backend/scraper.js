@@ -23,6 +23,10 @@ async function scrapeWebsite(url) {
 }
 
 async function generateResponse(scrapedText) {
+    console.log(scrapedText);
+    if (scrapedText.trim() === "") {
+        return "No news description found";
+    }
     const apiKey = "AIzaSyCb3VI30T90hTPATeJdt_tVV3WT0m-jYR8";
     const url =
         "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" +
@@ -43,7 +47,7 @@ async function generateResponse(scrapedText) {
 
                         Concise and Clear: Provide a succinct summary that captures the key points, main events, and significant details of the news article. The summary should be easy to understand and free from unnecessary elaboration.
 
-                        Generate the summary with these guidelines under 300 words making sure you only return summary with no heading or extra information. Scraped news article: ${scrapedText}`,
+                        Generate the summary with these guidelines under 300 words making sure you only return summary with no heading or extra information. Scraped news article: ${scrapedText}, If scraped news article is empty, return the response "No news description found instead of hallucinating"`,
                     },
                 ],
             },
@@ -62,8 +66,6 @@ async function generateResponse(scrapedText) {
         throw error;
     }
 }
-
-
 
 const server = http.createServer(async (req, res) => {
     if (req.method === "POST" && req.url === "/scrape") {

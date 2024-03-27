@@ -44,4 +44,26 @@ export const settings: ISetting[] = [
         public: false,
         packageValue: "",
     },
+
+    {
+        id: "google-search-api-key",
+        i18nLabel: "Google Search Api key",
+        i18nDescription:
+            "Provide your Google Custom Search JSON API key to find matching articles",
+        type: SettingType.STRING,
+        required: true,
+        public: false,
+        packageValue: "",
+    },
+
+    {
+        id: "google-search-engine-id",
+        i18nLabel: "Search engine id",
+        i18nDescription:
+            "Provide your CX id provided by Google Search API",
+        type: SettingType.STRING,
+        required: true,
+        public: false,
+        packageValue: "",
+    },
 ];
