@@ -1,0 +1,54 @@
+{
+    "id": "ce640826-f468-420a-8eac-5f7373013b03",
+    "version": "0.0.1",
+    "requiredApiVersion": "^1.19.0",
+    "iconFile": "icon.png",
+    "author": {
+        "name": "Zishan Ahmad",
+        "homepage": "NA",
+        "support": "NA"
+    },
+    "name": "News Aggregation",
+    "nameSlug": "news-aggregation",
+    "classFile": "NewsAggregationApp.ts",
+    "description": "An extension which aggregates news from various diffws source providers",
+    "implements": [],
+    "permissions": [
+        {
+            "name": "ui.registerButtons"
+        },
+        {
+            "name": "api"
+        },
+        {
+            "name": "slashcommand"
+        },
+        {
+            "name": "server-setting.read"
+        },
+        {
+            "name": "room.read"
+        },
+        {
+            "name": "persistence"
+        },
+        {
+            "name": "ui.interact"
+        },
+        {
+            "name": "networking"
+        },
+        {
+            "name": "message.write"
+        },
+        {
+            "name": "user.read"
+        },
+        {
+            "name": "room.write"
+        },
+        {
+            "name": "message.read"
+        }
+    ]
+}
