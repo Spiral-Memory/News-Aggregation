@@ -26,6 +26,12 @@ Note: You must have a Rocket Chat server set up. If you haven't set up a Rocket 
 
 4. Once the app is installed, you also need to start the RSS parser and scraper. Since npm packages are experimental to use in rc-apps, external services are used for this prototype version.
 
+To start the RSS parser and scraper, follow these steps:
+
+- Go to the root directory of the project.
+- Navigate to the `backend` folder.
+- Use `node scraper.js` and `node rssparser.js` in 2 separate instances of terminal.
+
 ## Features
 
 After installation, you can try out all the features of this app. Here's a video demonstrating all the features:
