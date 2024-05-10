@@ -49,3 +49,5 @@ To enable different news providers at the organization level, follow these steps
 Feel free to try out different features of this app. Here's a video demonstrating all the features:
 
 [News Aggregation App Features Video](https://drive.google.com/drive/folders/1yOnNJ4UucZqH91ZbXo0XVz0VMkkfqDL4?usp=sharing)
+
+To learn more about the code, feel free to read my GSoC proposal on news aggregation app from  here : https://github.com/Spiral-Memory/GSoC-Proposal
