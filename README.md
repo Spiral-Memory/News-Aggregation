@@ -32,8 +32,20 @@ To start the RSS parser and scraper, follow these steps:
 - Navigate to the `backend` folder.
 - Use `node scraper.js` and `node rssparser.js` in 2 separate instances of terminal.
 
+
 ## Features
 
-After installation, you can try out all the features of this app. Here's a video demonstrating all the features:
+This app currently supports 3 news aggregators: BBC News, TechCrunch, and NewsAPI, depending on what organization admin have enabled. It supports personalization at 3 levels: Workspace level controlled by the admin of the Rocket Chat server, DM level, and channel level personalization.
+
+To enable different news providers at the organization level, follow these steps:
+
+1. Go to RC app settings by clicking on the three dots present in the Rocket Chat app sidebar.
+2. Navigate to "Installed," then "Private Apps."
+3. Choose the "News Aggregation" app and then select "Settings."
+4. Enable/disable the news provider you want and provide required API keys to enable those services.
+5. To enable Google search and finding relevant articles, add the search engine CX ID as well. To generate that, information can be found [here](https://developers.google.com/custom-search/v1/overview).
+6. Once these features are enabled, navigate to any channel or DM, and use the command /personalize to perform personalization at the local level. Afterward, use the commands `/get-news techcrunch`, `/get-news bbcnews`, or `/get-news newsapi` to fetch the news from the respective sources. To summarize the content and find relevant articles, click on the "More" option for that message and then select either "Get Relevant Articles" or "Summarize News" based on your preference.
+
+Feel free to try out different features of this app. Here's a video demonstrating all the features:
 
 [News Aggregation App Features Video](https://drive.google.com/drive/folders/1yOnNJ4UucZqH91ZbXo0XVz0VMkkfqDL4?usp=sharing)
